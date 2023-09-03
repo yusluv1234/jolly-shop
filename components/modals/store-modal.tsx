@@ -2,6 +2,7 @@
 
 import * as z from "zod";
 
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -51,11 +52,17 @@ export const StoreModal = () => {
                 <FormItem>
                   <FormLabel>Name</FormLabel>
                   <FormControl>
-                    <Input />
+                    <Input placeholder="E-Commerce" {...field} />
                   </FormControl>
                 </FormItem>
               )}
             />
+            <div className="pt-6 space-x-2 flex items-center justify-end">
+              <Button variant="outline" onClick={storeModal.onClose}>
+                Cancel
+              </Button>
+              <Button type="submit">Continue</Button>
+            </div>
           </form>
         </Form>
       </div>
